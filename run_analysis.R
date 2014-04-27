@@ -1,16 +1,16 @@
- subtrain<-read.table("G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt")
- xtrain<-read.table("G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/X_train.txt")
- ytrain<-read.table("G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/y_train.txt")
+ subtrain<-read.table("./UCI HAR Dataset/train/subject_train.txt")
+ xtrain<-read.table("./UCI HAR Dataset/train/X_train.txt")
+ ytrain<-read.table("./UCI HAR Dataset/train/y_train.txt")
 
-  subtest<-read.table("G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt")
- xtest<-read.table("G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/X_test.txt")
- ytest<-read.table("G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/y_test.txt")
+  subtest<-read.table("./UCI HAR Dataset/test/subject_test.txt")
+ xtest<-read.table("./UCI HAR Dataset/test/X_test.txt")
+ ytest<-read.table("./UCI HAR Dataset/test/y_test.txt")
  
 
- activity<-read.table("G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/activity_labels.txt")
-activity$V2<-as.character(activity$V2)
+ activity<-read.table("./UCI HAR Dataset/activity_labels.txt")
+ activity$V2<-as.character(activity$V2)
 
- meancolumns<-read.table("G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/features.txt")
+ meancolumns<-read.table("./UCI HAR Dataset/features.txt")
 
 
 
@@ -107,7 +107,8 @@ for( subid in 1:30 )
   }       
 
 tidydataset<-row1        
- write.table(file="./tidydataset.txt",x=tidydataset,sep="\t", row.names=FALSE)
+
+write.table(file="./tidydataset.txt",x=tidydataset,sep="\t", row.names=FALSE)
  
 
                 
