@@ -107,7 +107,8 @@ for( subid in 1:30 )
   }       
 
 tidydataset<-row1        
-write.csv(file="G:/Prasanna Krishna/Analytics/Coursera/DataScience/Getting & Cleaning Data/Week3/tidydataset.csv",x=tidydataset)
+ write.table(file="./tidydataset.txt",x=tidydataset,sep="\t", row.names=FALSE)
+ 
 
                 
  
